@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Granted for Google Docs</title>
+  <meta name="description" content="Get help with Granted. Find answers to common questions about grant writing in Google Docs, or contact us directly.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green: #2ECC9B;
+      --green-dark: #25A97F;
+      --green-light: #f0faf5;
+      --dark: #0f1419;
+      --text-light: #faf8f5;
+      --text-dark: #1a1a2e;
+      --text-muted: #5f6368;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8faf9 0%, #f0f5f3 100%);
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 20, 25, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(46, 204, 155, 0.15);
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      position: relative;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-light);
+      cursor: pointer;
+    }
+
+    .logo .cursor {
+      color: var(--green);
+    }
+
+    .logo .full-name {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .logo:hover .mark {
+      opacity: 0;
+    }
+
+    .logo:hover .full-name {
+      opacity: 1;
+    }
+
+    .header-nav a {
+      margin-left: 30px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(250, 248, 245, 0.5);
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: var(--green);
+    }
+
+    /* Breadcrumb Bar */
+    .breadcrumb-bar {
+      background: var(--dark);
+      padding: 14px 30px;
+      margin-top: 60px;
+    }
+
+    .breadcrumb-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .breadcrumb-content a {
+      color: var(--green);
+      transition: opacity 0.2s;
+    }
+
+    .breadcrumb-content a:hover {
+      opacity: 0.8;
+    }
+
+    .breadcrumb-content .separator {
+      color: #555;
+    }
+
+    .breadcrumb-content .current {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Page Content */
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 30px 80px;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .page-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    /* Intro Card */
+    .intro-card {
+      background: var(--green-light);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 50px;
+      border-left: 4px solid var(--green);
+    }
+
+    .intro-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .intro-card p {
+      font-size: 14px;
+      color: var(--green-dark);
+      line-height: 1.6;
+    }
+
+    .intro-card code {
+      background: rgba(46, 204, 155, 0.15);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin-bottom: 50px;
+    }
+
+    .faq-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      border-left: 3px solid var(--green);
+      color: var(--text-dark);
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid rgba(46, 204, 155, 0.15);
+      border-radius: 14px;
+      padding: 24px;
+      transition: border-color 0.2s, box-shadow 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--green);
+      box-shadow: 0 4px 20px rgba(46, 204, 155, 0.08);
+    }
+
+    .faq-item h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .faq-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 300px 200px at 20% 50%, rgba(46, 204, 155, 0.08), transparent),
+        radial-gradient(ellipse 250px 150px at 80% 50%, rgba(46, 204, 155, 0.06), transparent);
+      pointer-events: none;
+    }
+
+    .contact-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .contact-section p {
+      font-size: 14px;
+      color: rgba(250, 248, 245, 0.5);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .contact-email {
+      display: inline-block;
+      background: linear-gradient(135deg, #2ECC9B 0%, #25A97F 100%);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .contact-email:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(46, 204, 155, 0.3);
+    }
+
+    .contact-note {
+      margin-top: 15px;
+      font-size: 12px;
+      color: rgba(250, 248, 245, 0.35);
+      position: relative;
+    }
+
+    /* Report Section */
+    .report-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      padding-left: 15px;
+      border-left: 3px solid var(--green);
+      color: var(--text-dark);
+    }
+
+    .report-section p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    .report-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .report-item {
+      background: #fff;
+      border: 1px solid rgba(46, 204, 155, 0.15);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .report-item::before {
+      content: "\2192";
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(46, 204, 155, 0.1);
+      color: var(--text-light);
+      padding: 50px 30px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--green);
+      margin-bottom: 22px;
+    }
+
+    .footer-nav {
+      margin-bottom: 22px;
+    }
+
+    .footer-nav a {
+      color: rgba(250, 248, 245, 0.4);
+      margin: 0 14px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--text-light);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(250, 248, 245, 0.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header-content {
+        padding: 15px 20px;
+      }
+
+      .header-nav a {
+        margin-left: 18px;
+        font-size: 12px;
+      }
+
+      .breadcrumb-bar {
+        padding: 14px 20px;
+      }
+
+      .page-content {
+        padding: 40px 20px 60px;
+      }
+
+      .page-title {
+        font-size: 28px;
+      }
+
+      .intro-card {
+        padding: 24px;
+      }
+
+      .report-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="mark">GR<span class="cursor">▌</span></span>
+        <span class="full-name">GRANTED</span>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-content">
+      <a href="index.html">Home</a>
+      <span class="separator">&rarr;</span>
+      <span class="current">Support</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="page-content">
+
+      <h1 class="page-title">Support</h1>
+      <p class="page-subtitle">Need help? We've got you covered.</p>
+
+      <div class="intro-card">
+        <h2>Getting Started</h2>
+        <p>
+          After installing from the Marketplace, open any Google Doc, go to
+          <code>Extensions &rarr; Granted</code>, and click &lsquo;Open sidebar&rsquo;. From there, explore the tabs: Library to save reusable content, Variables for smart placeholders, and PDF to package your final submission.
+        </p>
+      </div>
+
+      <div class="faq-section">
+        <h2>FAQ</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How does the Library work?</h3>
+            <p>Select text in your document and click "Save to Library". Organize blocks in folders (Team, Budget, Methodology...). Insert any saved block into any document with one click.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What are Smart Variables?</h3>
+            <p>Use {{placeholders}} like {{Project_Name}} or {{Budget}} in your text. Granted detects them automatically and lets you fill all instances at once.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How does the Tender Analyzer work?</h3>
+            <p>Upload a tender PDF in the Finalize tab. AI reads the document and extracts deadlines, evaluation criteria, required documents, and suggested structure.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do I create a submission PDF?</h3>
+            <p>Go to the PDF tab, add your annexes (from your computer or Drive), select pages, and build. Your proposal + annexes merge into one PDF saved to your Drive.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is my proposal private?</h3>
+            <p>Your document content stays in Google's servers. AI features send only the text you select to our secure server for processing. We never store your content.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is it free?</h3>
+            <p>Granted is free with 50 AI credits per week. Upgrade to Pro for unlimited AI access, or use all non-AI features without any limit.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can I collaborate with others?</h3>
+            <p>Yes! You get all Google Docs collaboration features: real-time editing, comments, suggestion mode, and sharing. Each collaborator can use their own Granted sidebar.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What AI features are available?</h3>
+            <p>Chat (ask questions about your document), synonyms, reformulations, tone adjustment, expand, condense, and full-document proofreading scan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Question, bug report, or feature request?</p>
+        <a href="mailto:hugothomas@hotmail.fr" class="contact-email">hugothomas@hotmail.fr</a>
+        <p class="contact-note">We typically respond within 48 hours.</p>
+      </div>
+
+      <div class="report-section">
+        <h2>Reporting a Problem</h2>
+        <p>If you're experiencing a bug, please include:</p>
+        <div class="report-list">
+          <div class="report-item">What happened</div>
+          <div class="report-item">What you expected</div>
+          <div class="report-item">Your browser & OS</div>
+          <div class="report-item">Any error messages</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">GRANTED</div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Granted. Made for grant writers.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Granted for Google Docs</title>
+  <meta name="description" content="Privacy policy for Granted. We don't collect your data or read your proposals. Your work stays private in your Google Drive.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green: #2ECC9B;
+      --green-dark: #25A97F;
+      --green-light: #f0faf5;
+      --dark: #0f1419;
+      --text-light: #faf8f5;
+      --text-dark: #1a1a2e;
+      --text-muted: #5f6368;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8faf9 0%, #f0f5f3 100%);
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 20, 25, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(46, 204, 155, 0.15);
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      position: relative;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-light);
+      cursor: pointer;
+    }
+
+    .logo .cursor {
+      color: var(--green);
+    }
+
+    .logo .full-name {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .logo:hover .mark {
+      opacity: 0;
+    }
+
+    .logo:hover .full-name {
+      opacity: 1;
+    }
+
+    .header-nav a {
+      margin-left: 30px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(250, 248, 245, 0.5);
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: var(--green);
+    }
+
+    /* Breadcrumb Bar */
+    .breadcrumb-bar {
+      background: var(--dark);
+      padding: 14px 30px;
+      margin-top: 60px;
+    }
+
+    .breadcrumb-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .breadcrumb-content a {
+      color: var(--green);
+      transition: opacity 0.2s;
+    }
+
+    .breadcrumb-content a:hover {
+      opacity: 0.8;
+    }
+
+    .breadcrumb-content .separator {
+      color: #555;
+    }
+
+    .breadcrumb-content .current {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Page Content */
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 30px 80px;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    /* Summary Card */
+    .summary-card {
+      background: var(--green-light);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 50px;
+      border-left: 4px solid var(--green);
+      text-align: center;
+    }
+
+    .summary-card p {
+      font-size: 15px;
+      color: var(--green-dark);
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      border-left: 3px solid var(--green);
+      color: var(--text-dark);
+    }
+
+    .section p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .section h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    /* Access Cards */
+    .access-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .access-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid rgba(46, 204, 155, 0.15);
+      transition: box-shadow 0.3s;
+    }
+
+    .access-card:hover {
+      box-shadow: 0 4px 20px rgba(46, 204, 155, 0.08);
+    }
+
+    .access-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 0;
+      color: var(--green-dark);
+    }
+
+    .access-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .access-card .scope {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--green-light);
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
+
+    .access-card .scope strong {
+      color: var(--green-dark);
+    }
+
+    /* No Collection List */
+    .no-collect {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid rgba(46, 204, 155, 0.15);
+      margin-top: 20px;
+    }
+
+    .no-collect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .no-collect-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .no-collect-item::before {
+      content: "\2717";
+      color: #ccc;
+      font-weight: 600;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 300px 200px at 20% 50%, rgba(46, 204, 155, 0.08), transparent),
+        radial-gradient(ellipse 250px 150px at 80% 50%, rgba(46, 204, 155, 0.06), transparent);
+      pointer-events: none;
+    }
+
+    .contact-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 12px;
+      border: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: rgba(250, 248, 245, 0.5);
+      margin-bottom: 0;
+      position: relative;
+    }
+
+    .contact-card a {
+      color: var(--green);
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Link styling */
+    .page-content a {
+      color: var(--green-dark);
+    }
+
+    .page-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(46, 204, 155, 0.1);
+      color: var(--text-light);
+      padding: 50px 30px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--green);
+      margin-bottom: 22px;
+    }
+
+    .footer-nav {
+      margin-bottom: 22px;
+    }
+
+    .footer-nav a {
+      color: rgba(250, 248, 245, 0.4);
+      margin: 0 14px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--text-light);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(250, 248, 245, 0.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header-content {
+        padding: 15px 20px;
+      }
+
+      .header-nav a {
+        margin-left: 18px;
+        font-size: 12px;
+      }
+
+      .breadcrumb-bar {
+        padding: 14px 20px;
+      }
+
+      .page-content {
+        padding: 40px 20px 60px;
+      }
+
+      .page-title {
+        font-size: 28px;
+      }
+
+      .no-collect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="mark">GR<span class="cursor">▌</span></span>
+        <span class="full-name">GRANTED</span>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-content">
+      <a href="index.html">Home</a>
+      <span class="separator">&rarr;</span>
+      <span class="current">Privacy Policy</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="page-content">
+
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="last-updated">Last updated: February 2026</p>
+
+      <div class="summary-card">
+        <p>Granted does not collect, store, or transmit any personal data to external servers. All data stays within your Google account.</p>
+      </div>
+
+      <div class="section">
+        <h2>Information We Access</h2>
+        <p>To provide its functionality, Granted requires access to:</p>
+
+        <div class="access-grid">
+          <div class="access-card">
+            <h3>1. Current Google Document</h3>
+            <p>We access the content of your open document to provide writing tools, variable replacement, and formatting features.</p>
+            <div class="scope"><strong>Scope:</strong> Limited to the document you have open. We cannot access other documents.</div>
+          </div>
+
+          <div class="access-card">
+            <h3>2. Google Drive</h3>
+            <p>When you export, we create PDF files in your Drive. The Library feature can browse your other documents to import saved content.</p>
+            <div class="scope"><strong>Scope:</strong> We create new files for export. Library browsing is read-only and user-initiated.</div>
+          </div>
+
+          <div class="access-card">
+            <h3>3. External Requests (AI Features)</h3>
+            <p>AI-powered features (chat, synonyms, reformulations, tender analysis) send selected text to our secure server for processing via Claude AI.</p>
+            <div class="scope"><strong>Scope:</strong> Only the text you explicitly select or submit. We don't store conversations or document content.</div>
+          </div>
+
+          <div class="access-card">
+            <h3>4. Email Address</h3>
+            <p>We use your Google email to identify your account for AI usage tracking and subscription management.</p>
+            <div class="scope"><strong>Scope:</strong> Email only. We don't access your contacts, calendar, or other personal data.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Information We Store</h2>
+
+        <h3>User Preferences</h3>
+        <p>Settings like formatting options are stored via Google's PropertiesService, within Google's infrastructure, associated with your account, not accessible to us.</p>
+
+        <h3>Document-Specific Data</h3>
+        <p>Info like your variable list and checklist items is stored in the document's properties. This data travels with the document and is only accessible to users with document access.</p>
+
+        <h3>Server-Side Data</h3>
+        <p>Our server stores: your email address, subscription plan, and weekly AI usage counts. We do not store document content, AI conversations, or any text you process through our tools.</p>
+      </div>
+
+      <div class="section">
+        <h2>What We Don't Collect</h2>
+        <div class="no-collect">
+          <div class="no-collect-grid">
+            <div class="no-collect-item">Your proposals or documents</div>
+            <div class="no-collect-item">AI conversation history</div>
+            <div class="no-collect-item">Personal info beyond email</div>
+            <div class="no-collect-item">Analytics or tracking</div>
+            <div class="no-collect-item">Third-party data sharing</div>
+            <div class="no-collect-item">Advertising data</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Data Security & Retention</h2>
+        <p>Document-related data remains within Google's infrastructure, protected by Google's security. Server communications use HTTPS encryption.</p>
+        <p>To delete all data, simply uninstall the add-on from your Google account. To request deletion of your server-side account data, contact us at the address below.</p>
+      </div>
+
+      <div class="section">
+        <h2>Google API Compliance</h2>
+        <p>Granted's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including Limited Use requirements.</p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Questions?</h2>
+        <p>Contact us at <a href="mailto:hugothomas@hotmail.fr">hugothomas@hotmail.fr</a></p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">GRANTED</div>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Granted. Made for grant writers.</p>
+    </div>
+  </footer>
+</body>
+</html>

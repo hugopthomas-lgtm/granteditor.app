@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Granted for Google Docs</title>
-  <meta name="description" content="Privacy policy for Granted. We don't collect your data or read your proposals. Your work stays private in your Google Drive.">
+  <title>Terms of Service - Granted for Google Docs</title>
+  <meta name="description" content="Terms of service for Granted, the Google Docs add-on for grant writing. Simple terms, no surprises.">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
@@ -159,21 +159,11 @@
       margin-bottom: 40px;
     }
 
-    /* Summary Card */
-    .summary-card {
-      background: var(--amber-light);
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 50px;
-      border-left: 4px solid var(--amber);
-      text-align: center;
-    }
-
-    .summary-card p {
-      font-size: 15px;
-      color: var(--amber-dark);
-      font-weight: 500;
-      line-height: 1.6;
+    .page-content > p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 30px;
     }
 
     /* Section */
@@ -198,87 +188,25 @@
       margin-bottom: 15px;
     }
 
-    .section h3 {
+    .section ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .section li {
       font-size: 14px;
-      font-weight: 600;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      color: var(--text-dark);
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 8px;
     }
 
-    /* Access Cards */
-    .access-grid {
-      display: grid;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .access-card {
-      background: #fff;
-      border-radius: 14px;
-      padding: 24px;
-      border: 1px solid rgba(245, 158, 11, 0.15);
-      transition: box-shadow 0.3s;
-    }
-
-    .access-card:hover {
-      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.08);
-    }
-
-    .access-card h3 {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      margin-top: 0;
+    /* Link styling */
+    .page-content a {
       color: var(--amber-dark);
     }
 
-    .access-card p {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .access-card .scope {
-      font-size: 12px;
-      color: var(--text-muted);
-      background: var(--amber-light);
-      padding: 8px 12px;
-      border-radius: 6px;
-      margin-top: 12px;
-    }
-
-    .access-card .scope strong {
-      color: var(--amber-dark);
-    }
-
-    /* No Collection List */
-    .no-collect {
-      background: #fff;
-      border-radius: 14px;
-      padding: 24px;
-      border: 1px solid rgba(245, 158, 11, 0.15);
-      margin-top: 20px;
-    }
-
-    .no-collect-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .no-collect-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .no-collect-item::before {
-      content: "\2717";
-      color: #ccc;
-      font-weight: 600;
+    .page-content a:hover {
+      text-decoration: underline;
     }
 
     /* Contact Card */
@@ -325,15 +253,6 @@
     }
 
     .contact-card a:hover {
-      text-decoration: underline;
-    }
-
-    /* Link styling */
-    .page-content a {
-      color: var(--amber-dark);
-    }
-
-    .page-content a:hover {
       text-decoration: underline;
     }
 
@@ -404,10 +323,6 @@
         font-size: 28px;
       }
 
-      .no-collect-grid {
-        grid-template-columns: 1fr;
-      }
-
       .footer-nav a {
         display: block;
         margin: 10px 0;
@@ -436,87 +351,135 @@
     <div class="breadcrumb-content">
       <a href="index.html">Home</a>
       <span class="separator">&rarr;</span>
-      <span class="current">Privacy Policy</span>
+      <span class="current">Terms of Service</span>
     </div>
   </div>
 
   <main>
     <div class="page-content">
 
-      <h1 class="page-title">Privacy Policy</h1>
+      <h1 class="page-title">Terms of Service</h1>
       <p class="last-updated">Last updated: February 2026</p>
 
-      <div class="summary-card">
-        <p>Granted does not collect, store, or transmit any personal data to external servers. All data stays within your Google account.</p>
+      <p>
+        These Terms of Service ("Terms") govern your use of Granted, a Google Docs add-on
+        for grant writing. By installing or using Granted, you agree to these Terms.
+      </p>
+
+      <div class="section">
+        <h2>1. Description of Service</h2>
+        <p>
+          Granted is a Google Docs add-on that provides grant writing tools,
+          including a reusable content library, variable management, AI-powered writing assistance,
+          tender analysis, and PDF export capabilities. The add-on operates within Google Docs and Google Drive.
+        </p>
       </div>
 
       <div class="section">
-        <h2>Information We Access</h2>
-        <p>To provide its functionality, Granted requires access to:</p>
-
-        <div class="access-grid">
-          <div class="access-card">
-            <h3>1. Current Google Document</h3>
-            <p>We access the content of your open document to provide writing tools, variable replacement, and formatting features.</p>
-            <div class="scope"><strong>Scope:</strong> Limited to the document you have open. We cannot access other documents.</div>
-          </div>
-
-          <div class="access-card">
-            <h3>2. Google Drive</h3>
-            <p>When you export, we create PDF files in your Drive. The Library feature can browse your other documents to import saved content.</p>
-            <div class="scope"><strong>Scope:</strong> We create new files for export. Library browsing is read-only and user-initiated.</div>
-          </div>
-
-          <div class="access-card">
-            <h3>3. External Requests (AI Features)</h3>
-            <p>AI-powered features (chat, synonyms, reformulations, tender analysis) send selected text to our secure server for processing via Claude AI.</p>
-            <div class="scope"><strong>Scope:</strong> Only the text you explicitly select or submit. We don't store conversations or document content.</div>
-          </div>
-
-          <div class="access-card">
-            <h3>4. Email Address</h3>
-            <p>We use your Google email to identify your account for AI usage tracking and subscription management.</p>
-            <div class="scope"><strong>Scope:</strong> Email only. We don't access your contacts, calendar, or other personal data.</div>
-          </div>
-        </div>
+        <h2>2. Acceptance of Terms</h2>
+        <p>
+          By installing, accessing, or using Granted, you acknowledge that you have read,
+          understood, and agree to be bound by these Terms. If you do not agree to these Terms,
+          do not install or use the add-on.
+        </p>
       </div>
 
       <div class="section">
-        <h2>Information We Store</h2>
-
-        <h3>User Preferences</h3>
-        <p>Settings like formatting options are stored via Google's PropertiesService, within Google's infrastructure, associated with your account, not accessible to us.</p>
-
-        <h3>Document-Specific Data</h3>
-        <p>Info like your variable list and checklist items is stored in the document's properties. This data travels with the document and is only accessible to users with document access.</p>
-
-        <h3>Server-Side Data</h3>
-        <p>Our server stores: your email address, subscription plan, and weekly AI usage counts. We do not store document content, AI conversations, or any text you process through our tools.</p>
+        <h2>3. Use of the Service</h2>
+        <p>You agree to:</p>
+        <ul>
+          <li>Use Granted only for lawful purposes</li>
+          <li>Use Granted in compliance with Google's Terms of Service and Acceptable Use Policy</li>
+          <li>Not attempt to reverse engineer, modify, or create derivative works of the add-on</li>
+          <li>Not use the add-on to infringe on any third party's intellectual property rights</li>
+        </ul>
       </div>
 
       <div class="section">
-        <h2>What We Don't Collect</h2>
-        <div class="no-collect">
-          <div class="no-collect-grid">
-            <div class="no-collect-item">Your proposals or documents</div>
-            <div class="no-collect-item">AI conversation history</div>
-            <div class="no-collect-item">Personal info beyond email</div>
-            <div class="no-collect-item">Analytics or tracking</div>
-            <div class="no-collect-item">Third-party data sharing</div>
-            <div class="no-collect-item">Advertising data</div>
-          </div>
-        </div>
+        <h2>4. Intellectual Property</h2>
+        <p>
+          <strong>Your Content.</strong> You retain all rights to the content you create using Granted. Your proposals,
+          library items, and creative work remain entirely yours.
+        </p>
+        <p>
+          <strong>Our Software.</strong> Granted and its original code, features, and functionality are owned by the
+          developer and are protected by copyright and other intellectual property laws.
+        </p>
       </div>
 
       <div class="section">
-        <h2>Data Security & Retention</h2>
-        <p>Document-related data remains within Google's infrastructure, protected by Google's security. Server communications use HTTPS encryption.</p>
-        <p>To delete all data, simply uninstall the add-on from your Google account. To request deletion of your server-side account data, contact us at the address below.</p>
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>
+          Granted is provided "as is" and "as available" without warranties of any kind,
+          either express or implied, including but not limited to implied warranties of
+          merchantability, fitness for a particular purpose, or non-infringement.
+        </p>
+        <p>We do not warrant that:</p>
+        <ul>
+          <li>The add-on will meet your specific requirements</li>
+          <li>The add-on will be uninterrupted, timely, secure, or error-free</li>
+          <li>Any errors in the add-on will be corrected</li>
+        </ul>
       </div>
 
       <div class="section">
-        <h2>Google API Compliance</h2>
-        <p>Granted's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including Limited Use requirements.</p>
+        <h2>6. Limitation of Liability</h2>
+        <p>
+          To the fullest extent permitted by applicable law, Granted and its developer
+          shall not be liable for any indirect, incidental, special, consequential, or
+          punitive damages, or any loss of profits, data, or goodwill, resulting from:
+        </p>
+        <ul>
+          <li>Your use or inability to use the add-on</li>
+          <li>Any unauthorized access to or alteration of your documents</li>
+          <li>Any bugs, viruses, or errors in the add-on</li>
+          <li>Any other matter relating to the add-on</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>7. Indemnification</h2>
+        <p>
+          You agree to indemnify and hold harmless Granted and its developer from any
+          claims, damages, losses, or expenses arising from your use of the add-on or your
+          violation of these Terms.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>8. Modifications to the Service</h2>
+        <p>
+          We reserve the right to modify, suspend, or discontinue Granted at any time,
+          with or without notice. We shall not be liable to you or any third party for any
+          modification, suspension, or discontinuation of the service.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>9. Changes to Terms</h2>
+        <p>
+          We may revise these Terms from time to time. The most current version will always
+          be available on this page. By continuing to use Granted after revisions become
+          effective, you agree to be bound by the revised Terms.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>10. Termination</h2>
+        <p>
+          You may stop using Granted at any time by uninstalling the add-on from your
+          Google account. We may terminate or suspend your access to the add-on at any time,
+          without prior notice, for conduct that we believe violates these Terms or is
+          harmful to other users or us.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>11. Governing Law</h2>
+        <p>
+          These Terms shall be governed by and construed in accordance with the laws of France,
+          without regard to its conflict of law provisions.
+        </p>
       </div>
 
       <div class="contact-card">
@@ -536,7 +499,7 @@
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </nav>
-      <p class="footer-copy">&copy; 2025 Granted. Made for grant writers.</p>
+      <p class="footer-copy">&copy; 2026 Granted. Made for grant writers.</p>
     </div>
   </footer>
 </body>
